@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Geometry Calculator</title>
+    <link rel="stylesheet" href="Task4.css">
+</head>
+<body>
+
+<header>
+    3D Geometry Calculator📱
+</header>
+
+<div class="container">
+    <!-- Cube Section -->
+    <div class="section">
+        <img class="image" src="cube.jpg">
+        <h2>Cube</h2>
+        <input type="number" id="cubeSide" placeholder="Side Length" />
+        <button onclick="calculateCube()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="cubeVolumeFormula"></span>, Surface Area = <span id="cubeSurfaceAreaFormula"></span></div>
+        <div class="result" id="cubeResult"></div>
+    </div>
+
+    <!-- Sphere Section -->
+    <div class="section">
+        <img class="image" src="Sphere.jpg" alt="">
+        <h2>Sphere</h2>
+        <input type="number" id="sphereRadius" placeholder="Radius" />
+        <button onclick="calculateSphere()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="sphereVolumeFormula"></span>, Surface Area = <span id="sphereSurfaceAreaFormula"></span></div>
+        <div class="result" id="sphereResult"></div>
+    </div>
+
+    <!-- Cylinder Section -->
+    <div class="section">
+        <img class="image" src="Cylinder.jpg" alt="">
+        <h2>Cylinder</h2>
+        <input type="number" id="cylinderRadius" placeholder="Radius" />
+        <input type="number" id="cylinderHeight" placeholder="Height" />
+        <button onclick="calculateCylinder()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="cylinderVolumeFormula"></span>, Surface Area = <span id="cylinderSurfaceAreaFormula"></span></div>
+        <div class="result" id="cylinderResult"></div>
+    </div>
+
+    <!-- Cone Section -->
+    <div class="section">
+        <img class="image" src="Cone.jpg" alt="">
+        <h2>Cone</h2>
+        <input type="number" id="coneRadius" placeholder="Radius" />
+        <input type="number" id="coneHeight" placeholder="Height" />
+        <button onclick="calculateCone()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="coneVolumeFormula"></span>, Surface Area = <span id="coneSurfaceAreaFormula"></span></div>
+        <div class="result" id="coneResult"></div>
+    </div>
+
+    <!-- Rectangular Prism Section -->
+    <div class="section">
+        <img class="image" src="Rectangular Prism.jpg" alt="">
+        <h2>Rectangular Prism</h2>
+        <input type="number" id="rectPrismLength" placeholder="Length" />
+        <input type="number" id="rectPrismWidth" placeholder="Width" />
+        <input type="number" id="rectPrismHeight" placeholder="Height" />
+        <button onclick="calculateRectPrism()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="rectPrismVolumeFormula"></span>, Surface Area = <span id="rectPrismSurfaceAreaFormula"></span></div>
+        <div class="result" id="rectPrismResult"></div>
+    </div>
+
+    <!-- Pyramid Section -->
+    <div class="section">
+        <img class="image" src="Pyramid.jpg" alt="">
+        <h2>Pyramid</h2>
+        <input type="number" id="pyramidBase" placeholder="Base Length" />
+        <input type="number" id="pyramidHeight" placeholder="Height" />
+        <button onclick="calculatePyramid()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="pyramidVolumeFormula"></span>, Surface Area = <span id="pyramidSurfaceAreaFormula"></span></div>
+        <div class="result" id="pyramidResult"></div>
+    </div>
+
+    <!-- Tetrahedron Section -->
+    <div class="section">
+        <img class="image" src="Tetrahedron.jpg" alt="">
+        <h2>Tetrahedron</h2>
+        <input type="number" id="tetrahedronEdge" placeholder="Edge Length" />
+        <button onclick="calculateTetrahedron()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="tetrahedronVolumeFormula"></span></div>
+        <div class="result" id="tetrahedronResult"></div>
+    </div>
+
+    <!-- Hemisphere Section -->
+    <div class="section">
+        <img class="image" src="Hemisphere1.jpg" alt="">
+        <h2>Hemisphere</h2>
+        <input type="number" id="hemisphereRadius" placeholder="Radius" />
+        <button onclick="calculateHemisphere()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="hemisphereVolumeFormula"></span>, Surface Area = <span id="hemisphereSurfaceAreaFormula"></span></div>
+        <div class="result" id="hemisphereResult"></div>
+    </div>
+
+    <!-- Torus Section -->
+    <div class="section">
+        <img class="image" src="Torus.jpg" alt="">
+        <h2>Torus</h2>
+        <input type="number" id="torusRadius" placeholder="Radius" />
+        <input type="number" id="torusTubeRadius" placeholder="Tube Radius" />
+        <button onclick="calculateTorus()">Calculate</button>
+        <div class="formula">Formula: Volume = <span id="torusVolumeFormula"></span>, Surface Area = <span id="torusSurfaceAreaFormula"></span></div>
+        <div class="result" id="torusResult"></div>
+    </div>
+</div>
+
+<script src="Task4.js"></script>
+
+</body>
+</html>
