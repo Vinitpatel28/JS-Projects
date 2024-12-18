@@ -1,27 +1,26 @@
-// JavaScript to handle the form submission, display feedback and log to the console
 document.getElementById('feedbackForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form submission
-    
-    // Get form input values
-    const name = document.getElementById('name').value;
-    const feedback = document.getElementById('feedback').value;
-    
-    // Check if inputs are not empty
-    if (name && feedback) {
-      // Display the feedback on the page
-      document.getElementById('feedbackOutput').innerHTML = `
-        <strong>Name:</strong> ${name}<br>
-        <strong>Feedback:</strong> ${feedback}
-      `;
-      
-      // Log the feedback in the console
-      console.log("Feedback received:");
-      console.log("Name: " + name);
-      console.log("Feedback: " + feedback);
-      
-      // Clear the form fields after submission
-      document.getElementById('feedbackForm').reset();
-    } else {
-      alert('Please fill in both fields before submitting!');
-    }
-  });
+  event.preventDefault();
+
+  // Get the form values
+  const name = document.getElementById('name').value;
+  const enrollment = document.getElementById('enrollment').value;
+  const email = document.getElementById('email').value;
+  const division = document.getElementById('division').value;
+  const feedback = document.getElementById('feedback').value;
+  const rating = document.getElementById('rating').value;
+
+  // Display only the name in the "Thank You" message
+  document.getElementById('responseMessage').textContent = `Thank you, ${name}! `;
+  document.getElementById('responseMessage').style.color = 'green';
+
+  // Log the rest of the form data to the console
+  console.log("Form Data Submitted:");
+  console.log(`Enrollment Number: ${enrollment}`);
+  console.log(`Email: ${email}`);
+  console.log(`Division: ${division}`);
+  console.log(`Feedback: ${feedback}`);
+  console.log(`Rating: ${rating}`);
+
+  // Optionally, clear the form
+  document.getElementById('feedbackForm').reset();
+});

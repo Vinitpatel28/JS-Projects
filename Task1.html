@@ -4,56 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback Form</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-    .feedback-container {
-      margin-top: 20px;
-    }
-    .feedback-box {
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .submit-btn {
-      padding: 10px 20px;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .submit-btn:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" href="Task1.css">
 </head>
 <body>
 
-  <h2>Submit Your Feedback</h2>
-  
-  <form id="feedbackForm">
-    <label for="name">Your Name:</label><br>
-    <input type="text" id="name" name="name" class="feedback-box" required><br><br>
-    
-    <label for="feedback">Your Feedback:</label><br>
-    <textarea id="feedback" name="feedback" class="feedback-box" rows="4" required></textarea><br><br>
-    
-    <button type="submit" class="submit-btn">Submit Feedback</button>
-  </form>
+  <div class="container">
+    <h2>Feedback Form</h2>
+    <form id="feedbackForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-  <div class="feedback-container">
-    <h3>Feedback Received:</h3>
-    <p id="feedbackOutput"></p>
+      <label for="enrollment">Enrollment Number:</label>
+      <input type="text" id="enrollment" name="enrollment" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="division">Division:</label>
+      <input type="text" id="division" name="division" required>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <label for="rating">Rating:</label>
+      <select id="rating" name="rating">
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="responseMessage" class="response-message"></div>
   </div>
 
-  <script src="./Task1.js">
-    
-  </script>
-
+  <script src="Task1.js"></script>
 </body>
 </html>
