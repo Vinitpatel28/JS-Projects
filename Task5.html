@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Player Dice Game</title>
+    <link rel="stylesheet" href="Task5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Two Player Dice Game</h1>
+        
+        <div class="radio-group">
+            <label for="player1">Player 1</label>
+            <input type="radio" id="player1" name="player" value="player1" checked>
+            
+            <label for="player2">Player 2</label>
+            <input type="radio" id="player2" name="player" value="player2">
+        </div>
+        
+        <button onclick="rollDice()">Roll Dice</button>
+        
+        <div class="result">
+            <p id="player1Roll">Player 1 Roll: <span id="player1Dice">0</span></p>
+            <p id="player2Roll">Player 2 Roll: <span id="player2Dice">0</span></p>
+        </div>
+        
+        <div id="winner"></div>
+    </div>
+
+    <script src="Task5.js"></script>
+</body>
+</html>

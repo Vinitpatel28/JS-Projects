@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="Task6.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unit Converter</h1>
+        
+        <label for="converter-type">Select Converter Type:</label>
+        <select id="converter-type" onchange="showConverter()">
+            <option value="temperature">Temperature Converter</option>
+            <option value="mass">Mass Converter</option>
+            <option value="height">Height Converter</option>
+        </select>
+        
+        <!-- Temperature Converter Section -->
+        <div id="temperature-section" class="converter-section">
+            <label for="temp">Enter Temperature:</label>
+            <input type="number" id="temp" placeholder="Enter temperature">
+            <div class="radio-group">
+                <label for="celsius">Celsius</label>
+                <input type="radio" id="celsius" name="unit" value="celsius" checked>
+                <label for="fahrenheit">Fahrenheit</label>
+                <input type="radio" id="fahrenheit" name="unit" value="fahrenheit">
+            </div>
+            <button onclick="convertTemperature()">Convert</button>
+            <div class="result">
+                <p id="output"></p>
+            </div>
+        </div>
+
+        <!-- Mass Converter Section -->
+        <div id="mass-section" class="converter-section" style="display: none;">
+            <label for="mass">Enter Mass (kg):</label>
+            <input type="number" id="mass" placeholder="Enter mass in kg">
+            <button onclick="convertMass()">Convert</button>
+            <div class="result">
+                <p id="mass-output"></p>
+            </div>
+        </div>
+
+        <!-- Height Converter Section -->
+        <div id="height-section" class="converter-section" style="display: none;">
+            <label for="height">Enter Height (cm):</label>
+            <input type="number" id="height" placeholder="Enter height in cm">
+            <button onclick="convertHeight()">Convert</button>
+            <div class="result">
+                <p id="height-output"></p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="Task6.js"></script>
+</body>
+</html>
