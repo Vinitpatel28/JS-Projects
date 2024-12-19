@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="Task8.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Random Password Generator ✨</h1>
+        
+        <!-- Length input -->
+        <div class="input-group">
+            <label for="passwordLength">Password Length:</label>
+            <input type="number" id="passwordLength" min="12" max="64" value="12">
+        </div>
+
+        <!-- Character types options -->
+        <div class="options">
+            <label><input type="checkbox" id="includeLowercase" checked> Lowercase Letters</label>
+            <label><input type="checkbox" id="includeUppercase" checked> Uppercase Letters</label>
+            <label><input type="checkbox" id="includeNumbers" checked> Numbers</label>
+            <label><input type="checkbox" id="includeSpecial" checked> Special Characters</label>
+        </div>
+        
+        <!-- Generate button -->
+        <button id="generateButton" class="btn">Generate Password</button>
+
+        <!-- Display result -->
+        <div class="result">
+            <p>Your random password:</p>
+            <input type="text" id="generatedPassword" readonly>
+        </div>
+    </div>
+
+    <script src="Task8.js"></script>
+</body>
+</html>
